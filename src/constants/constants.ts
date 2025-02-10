@@ -1,17 +1,17 @@
 export const cryptoMetadata = {
   BTCUSDT: {
     name: "Bitcoin",
-    icon: "/src/assets/bitcoin.svg",
+    icon: "/public/assets/bitcoin.svg",
     code: "BTC",
   },
   ETHUSDT: {
     name: "Ethereum",
-    icon: "/src/assets/ethereum.svg",
+    icon: "/public/assets/ethereum.svg",
     code: "ETH",
   },
   SHIBUSDT: {
     name: "Shiba Inu",
-    icon: "/src/assets/shiba.svg",
+    icon: "/public/assets/shiba.svg",
     code: "SHIB",
   },
 };
