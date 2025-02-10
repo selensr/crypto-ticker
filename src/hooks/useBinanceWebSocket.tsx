@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { cryptoMetadata } from "../constants/constants";
 import { formatUSD } from "../helpers/helpers";
 
+const BINANCE_WS_BASE = "wss://stream.binance.com:9443";
+
 export function useBinanceWebSocket(pairs: string[]) {
   const queryClient = useQueryClient();
 
@@ -10,7 +12,7 @@ export function useBinanceWebSocket(pairs: string[]) {
     const streams = pairs
       .map((pair) => `${pair.toLowerCase()}@ticker`)
       .join("/");
-    const WEBSOCKET_URL = `wss://stream.binance.com:9443/stream?streams=${streams}`;
+    const WEBSOCKET_URL = `${BINANCE_WS_BASE}/stream?streams=${streams}`;
     //single stream => wss://stream.binance.com:9443/ws/${pair.toLowerCase()}@ticker
     //multiple stream => wss://stream.binance.com:9443/stream?streams=btcusdt@ticker/ethusdt@ticker/adausdt@ticker
 
