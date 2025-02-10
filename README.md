@@ -2,6 +2,8 @@
 
 Crypto Ticker is a React-based web application that displays live data of selected cryptocurrencies, including their prices, market values, and 24-hour percentage changes. The application uses Binance WebSocket API and Binance REST API to fetch and display real-time cryptocurrency data.
 
+for live demo [click here](https://cosmic-hummingbird-caef87.netlify.app/)
+
 ---
 
 ## 🚀 Features
@@ -49,4 +51,12 @@ Crypto Ticker is a React-based web application that displays live data of select
 2. Install the dependencies:
    ```bash
     npm install
+   ```
+3. Run the application:
+   ```bash
+   npm run dev
+   ```
+4. Build the application:
+   ```bash
+   npm run build
    ```
