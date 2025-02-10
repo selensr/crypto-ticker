@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { cryptoMetadata } from "../constants/constants";
 import { formatUSD } from "../helpers/helpers";
 
-function useBinanceWebSocket(pairs: string[]) {
+export function useBinanceWebSocket(pairs: string[]) {
   const queryClient = useQueryClient();
 
   useEffect(() => {
@@ -66,5 +66,3 @@ function useBinanceWebSocket(pairs: string[]) {
 
   return null;
 }
-
-export default useBinanceWebSocket;

@@ -12,24 +12,24 @@ const Chart: FC<{ data: LiveData }> = memo(({ data }) => {
     ];
   }, [data.openPrice, data.highPrice, data.lowPrice, data.lastPrice]);
 
+  const isPriceUp = chartData[0].price < chartData[chartData.length - 1].price;
+
   return (
-    <ResponsiveContainer width="100%" height={40}>
-      <LineChart data={chartData}>
-        <Line
-          type="monotone"
-          dataKey="price"
-          stroke={
-            chartData[0].price < chartData[chartData.length - 1].price
-              ? "green"
-              : "red"
-          }
-          strokeWidth={2}
-          dot={false}
-          isAnimationActive={false}
-          animationDuration={0}
-        />
-      </LineChart>
-    </ResponsiveContainer>
+    <div data-testid="chart-container">
+      <ResponsiveContainer width="100%" height={40}>
+        <LineChart data={chartData}>
+          <Line
+            type="monotone"
+            dataKey="price"
+            stroke={isPriceUp ? "green" : "red"}
+            strokeWidth={2}
+            dot={false}
+            isAnimationActive={false}
+            animationDuration={0}
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 });
 

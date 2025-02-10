@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { LiveData } from "../constants/constants";
 
-const usePolling24hChange = (symbols: string[], interval = 30000) => {
+export const usePolling24hChange = (symbols: string[], interval = 30000) => {
   const [data, setData] = useState<LiveData[]>([]);
 
   useEffect(() => {
@@ -36,5 +36,3 @@ const usePolling24hChange = (symbols: string[], interval = 30000) => {
 
   return data;
 };
-
-export default usePolling24hChange;

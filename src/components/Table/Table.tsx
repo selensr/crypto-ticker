@@ -6,13 +6,14 @@ import {
   flexRender,
 } from "@tanstack/react-table";
 import style from "./Table.module.scss";
-import useBinanceWebSocket from "../../hooks/useBinanceWebSocket";
-import { useCryptoData } from "../../hooks/useCryptoData";
 import Avatar from "../Avatar/Avatar";
 import { DataType } from "../../constants/types";
 import Chart from "../Chart/Chart";
 import { cryptoSymbols, LiveData } from "../../constants/constants";
-import usePolling24hChange from "../../hooks/usePolling24hChange";
+
+import { usePolling24hChange } from "../../hooks/usePolling24hChange";
+import { useBinanceWebSocket } from "../../hooks/useBinanceWebSocket";
+import { useCryptoData } from "../../hooks/useCryptoData";
 
 const Table: FC = () => {
   useBinanceWebSocket(cryptoSymbols);
