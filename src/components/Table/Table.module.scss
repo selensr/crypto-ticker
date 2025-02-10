@@ -1,0 +1,62 @@
+.tableContainer {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  width: 100%;
+  max-width: 97vw; /* Ensures it doesn't exceed the screen width */
+}
+
+.table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    background-color: #f6f8fa;
+    text-align: left;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #909091;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 60%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    width: 10%;
+  }
+
+  th:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  tbody tr:hover {
+    //background-color: #f7fafc;
+  }
+}
+
+.cryptoName {
+  font-size: 12px;
+
+  .cryptoCodeName {
+    font-weight: 600;
+    color: rgba(2, 2, 100, 0.681);
+  }
+}
+
+.cryptoFullName {
+  font-size: 10px;
+  color: #909091;
+}
